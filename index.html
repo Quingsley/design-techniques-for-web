@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+</head>
+<body>
+    <form method="post">
+        <div id="test-event">
+            <input type="text" name="name" pattern="[A-Za-z]+" placeholder="Enter your name" required>
+        </div>
+        <br>
+        <div>
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <br>
+        <div>
+            <input type="password" name="password" placeholder="Enter your password" minlength="8" id="element2"
+                maxlength="16" required>
+        </div>
+        <br>
+        <div>
+            <input type="password" name="confirm_password" placeholder="Confirm your password" minlength="8"
+                maxlength="16" required>
+        </div>
+        <br>
+        <div>
+            <input type="number" name="number" placeholder="Enter a number between 1-100" min="1" max="100" required>
+        </div>
+        <br>
+
+        <div>
+            <input type="url" name="url" placeholder="Enter your url" required>
+        </div>
+        <br>
+        <div>
+            <input type="date" name="date" placeholder="Enter your date" required>
+        </div>
+        <br>
+        <div>
+            <input type="time" name="time" placeholder="Enter your time" required>
+        </div>
+        <br>
+        <div>
+            <input type="month" name="month" placeholder="Enter your month" required>
+        </div>
+        <br>
+        <div>
+            <input type="week" name="week" placeholder="Enter your week" min="20" max="30" required>
+        </div>
+        <br>
+        <div>
+            <input type="datetime-local" name="datetime-local" placeholder="Enter your datetime-local" required>
+        </div>
+        <br>
+        <div>
+            <input type="search" name="search" placeholder="Enter your  country code" pattern="^[A-Z]{2}$" required>
+        </div>
+        <br>
+        <div>
+            <input type="tel" name="tel" placeholder="Enter your phone number" pattern="^(07\d{8}|01\d{8}|\+2547\d{8})$"
+                required>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="customPattern" placeholder="Enter your admission number" name="customPattern"
+                pattern="^COM/\d{1,4}/\d{1,2}$" required>
+        </div>
+        <br>
+        <div>
+            <input type="submit" name="submit" value="Submit" id="element1" data-time="12:30">
+        </div>
+        <br>
+        <textarea></textarea>
+    </form>
+
+</body>
+<!-- <script src="./swap-elements.js"></script> -->
+<!-- <script src="./events.js"></script>
+ -->
+<script src="./async.js"></script>
+<!-- <script type="module" src="./promises.js"></script> -->
+</html>
