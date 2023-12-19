@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('load', (e) => {
+            const parent = document.getElementById('parent');
+            console.log(parent);
+            const children = parent.children;
+            const descendants = parent.querySelectorAll("li");
+            console.log('CHILDREN', children);
+            console.log('DESCENDANTS', descendants);
+            console.log(children.length);
+            console.log(descendants.length);
+            const newLi = document.createElement('li');
+            newLi.appendChild(document.createTextNode('Yesterday'));
+            parent.appendChild(newLi);
+            console.log(children.length);
+            console.log(descendants.length);
+        })
+    </script>
+    <ul id="parent">
+        <li>Today!</li>
+    </ul>
+</body>
+</html>
