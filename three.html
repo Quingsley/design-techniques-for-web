@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three</title>
+</head>
+<body>
+    <p>
+        <label for="checked">
+            <input type="checkbox" disabled id="checkbox">
+        </label>
+    </p>
+    <p>
+        <button id="button">Click me to check or uncheck checkbox</button>
+    </p>
+</body>
+<script>
+    const btn = document.getElementById('button');
+    btn.addEventListener('click', toggle)
+    function toggle(e) {
+        e.preventDefault();
+        const checkbox = document.getElementById('checkbox');
+        if (checkbox.hasAttribute('disabled')) checkbox.removeAttribute('disabled');
+        checkbox.hasAttribute('checked') ? checkbox.removeAttribute('checked') :
+            checkbox.setAttribute('checked', 'checked');
+    }
+</script>
+</html>
